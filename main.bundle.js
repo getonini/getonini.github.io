@@ -360,7 +360,10 @@ var TaskService = (function () {
         this._http = _http;
         this.baseUrl = 'https://tasklist-backend.herokuapp.com/api';
         //private baseUrl: string = 'http://localhost:8080/api'
-        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" });
+        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+            "Access-Control-Allow-Headers": "origin, content-type, accept, x-requested-with" });
         this.options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
         this.task = new __WEBPACK_IMPORTED_MODULE_6__task__["a" /* Task */]();
     }
